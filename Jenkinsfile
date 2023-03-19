@@ -84,6 +84,16 @@ pipeline {
                
             }
         }
+
+
+         stage('Terraform destroy') {
+            steps {
+                echo 'Terraform apply...'
+                sh 'sudo terraform destroy --auto-approve'
+               
+               
+            }
+        }
         
         
     }
